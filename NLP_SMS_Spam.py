@@ -105,7 +105,7 @@ from sklearn.neighbors import KNeighborsClassifier
 pipeline_knn  = Pipeline([
             ('bow', CountVectorizer(analyzer=rem_punc_stopwords)),
             ('tfidf', TfidfTransformer()),
-            ('classifier', RandomForestClassifier())
+            ('classifier', KNeighborsClassifier())
         ])
 
 pipeline_knn.fit(msg_train, label_train)
